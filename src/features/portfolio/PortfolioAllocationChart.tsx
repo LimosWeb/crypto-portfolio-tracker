@@ -1,5 +1,5 @@
 import { PieChart, PlusCircle } from 'lucide-react'
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { usePortfolioMetrics } from '@/hooks/usePortfolioMetrics'
 import { formatCurrency } from '@/utils/formatters'

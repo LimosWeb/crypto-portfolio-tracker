@@ -1,5 +1,5 @@
 import { AlertTriangle, ArrowDownUp, Clock, Coins } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { useCurrencyConverter } from '@/hooks/useCurrencyConverter'
 import type { FiatCurrency } from '@/types/crypto'

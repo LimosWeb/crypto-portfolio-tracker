@@ -1,5 +1,5 @@
 import { ArrowUpRight, Calendar, Plus, Trash2 } from 'lucide-react'
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { Button } from '@/components/ui/Button'
 import { usePortfolioStore } from '@/store/portfolioStore'
 import { formatCurrency, formatNumber } from '@/utils/formatters'

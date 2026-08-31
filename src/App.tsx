@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { DashboardLayout } from '@/components/layout/DashboardLayout'
 import { CurrencyConverter } from '@/features/converter/CurrencyConverter'
 import { DashboardView } from '@/features/dashboard/DashboardView'
