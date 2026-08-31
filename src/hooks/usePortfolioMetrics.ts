@@ -58,10 +58,12 @@ export function usePortfolioMetrics() {
       totalCurrentValue,
     )
 
-    const assets: AssetAllocation[] = assetsWithoutAllocation.map((a) => ({
-      ...a,
-      allocationPercentage: calculateAllocationPercentage(a.currentValue, totalCurrentValue),
-    }))
+    const assets: AssetAllocation[] = assetsWithoutAllocation
+      .map((a) => ({
+        ...a,
+        allocationPercentage: calculateAllocationPercentage(a.currentValue, totalCurrentValue),
+      }))
+      .sort((a, b) => b.currentValue - a.currentValue)
 
     return {
       totalCost,
