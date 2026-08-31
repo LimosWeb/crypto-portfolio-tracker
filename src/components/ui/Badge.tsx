@@ -6,7 +6,7 @@ type BadgeVariant = 'success' | 'danger' | 'neutral' | 'info'
 type BadgeSize = 'sm' | 'md'
 
 interface BadgeProps {
-  value?: number
+  value?: number | null
   variant?: BadgeVariant
   showIcon?: boolean
   showSign?: boolean
@@ -47,7 +47,7 @@ export function Badge({
   children,
   className,
 }: BadgeProps) {
-  const hasValue = value !== undefined
+  const hasValue = value != null
 
   const resolvedVariant: BadgeVariant = hasValue
     ? resolveVariant(value)
