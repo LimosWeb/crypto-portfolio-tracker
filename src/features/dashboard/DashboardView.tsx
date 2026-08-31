@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+
 import { PriceChart } from '@/features/chart/PriceChart'
-import { MarketTable } from '@/features/market/MarketTable'
+
 import { PortfolioAllocationChart } from '@/features/portfolio/PortfolioAllocationChart'
 import { PortfolioSummaryCards } from '@/features/portfolio/PortfolioSummaryCards'
 import { TransactionList } from '@/features/portfolio/TransactionList'

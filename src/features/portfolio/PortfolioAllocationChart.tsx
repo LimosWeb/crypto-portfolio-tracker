@@ -2,7 +2,7 @@ import { PieChart, PlusCircle } from 'lucide-react'
 import React, { useMemo, useState } from 'react'
 import { Skeleton } from '@/components/ui/Skeleton'
 import { usePortfolioMetrics } from '@/hooks/usePortfolioMetrics'
-import { formatCurrency, formatPercentage } from '@/utils/formatters'
+import { formatCurrency } from '@/utils/formatters'
 
 const PALETTE = [
   '#10b981',
