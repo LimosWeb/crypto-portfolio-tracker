@@ -6,7 +6,7 @@ import type { Transaction } from '@/types/portfolio'
 interface PortfolioState {
   transactions: Transaction[]
   currency: FiatCurrency
-  addTransaction: (transaction: Omit<Transaction, 'id' | 'timestamp'>) => void
+  addTransaction: (transaction: Omit<Transaction, 'id'>) => void
   removeTransaction: (id: string) => void
   setCurrency: (currency: FiatCurrency) => void
   clearPortfolio: () => void
@@ -25,7 +25,6 @@ export const usePortfolioStore = create<PortfolioState>()(
             {
               ...transaction,
               id: crypto.randomUUID(),
-              timestamp: Date.now(),
             },
           ],
         })),

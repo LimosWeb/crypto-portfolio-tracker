@@ -111,7 +111,8 @@ export function AddTransactionModal({ isOpen, onClose }: AddTransactionModalProp
     setErrors(errs)
     if (Object.keys(errs).length > 0) return
 
-    const timestamp = new Date(form.date).getTime()
+    const [year, month, day] = form.date.split('-').map(Number)
+    const timestamp = new Date(year, month - 1, day).getTime()
 
     addTransaction({
       coinId: form.coinId,
