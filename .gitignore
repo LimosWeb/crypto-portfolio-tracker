@@ -39,3 +39,5 @@ Thumbs.db
 
 # Cartelle e regole agenti/IDE locali
 .agents/
+# AI Agent & Workspace configs
+.agents/
