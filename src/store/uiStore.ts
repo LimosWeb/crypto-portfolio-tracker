@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import type { TimeFrame } from '@/types/crypto'
 import type { ChartType, SortDirection, SortField, TabType } from '@/types/ui'
 
 const defaultSortDirection: Record<SortField, SortDirection> = {
@@ -14,10 +15,14 @@ interface UiState {
   sortField: SortField
   sortDirection: SortDirection
   chartType: ChartType
+  selectedCoinId: string
+  chartTimeframe: TimeFrame
   setActiveTab: (tab: TabType) => void
   setSearchQuery: (query: string) => void
   setSorting: (field: SortField) => void
   setChartType: (type: ChartType) => void
+  setSelectedCoinId: (id: string) => void
+  setChartTimeframe: (timeframe: TimeFrame) => void
   resetFilters: () => void
 }
 
@@ -27,6 +32,8 @@ export const useUiStore = create<UiState>()((set, get) => ({
   sortField: 'market_cap_rank',
   sortDirection: 'asc',
   chartType: 'area',
+  selectedCoinId: 'bitcoin',
+  chartTimeframe: '7d',
 
   setActiveTab: (tab) => set({ activeTab: tab }),
 
@@ -45,6 +52,10 @@ export const useUiStore = create<UiState>()((set, get) => ({
 
   setChartType: (type) => set({ chartType: type }),
 
+  setSelectedCoinId: (id) => set({ selectedCoinId: id }),
+
+  setChartTimeframe: (timeframe) => set({ chartTimeframe: timeframe }),
+
   resetFilters: () =>
     set({
       searchQuery: '',
@@ -52,3 +63,4 @@ export const useUiStore = create<UiState>()((set, get) => ({
       sortDirection: defaultSortDirection[get().sortField],
     }),
 }))
+
