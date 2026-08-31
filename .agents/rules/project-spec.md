@@ -25,6 +25,7 @@ Piattaforma web ad alte prestazioni per il monitoraggio in tempo reale dei merca
    - Nessun re-render superfluo: memoizzare le righe della tabella (`React.memo`) e usare selettori atomici per Zustand.
    - I calcoli pesanti e le normalizzazioni delle serie storiche devono avvenire prima del passaggio alla UI/grafici.
 3. **TypeScript:** Strict mode abilitato, nessun tipo `any`. Tipi espliciti e centralizzati in `src/types/`.
+4. **Nessun commento nel codice:** Non inserire mai commenti (`//`, `/* */`, JSDoc) all'interno dei file sorgente.
 
 ## Struttura delle Directory
 ```text
